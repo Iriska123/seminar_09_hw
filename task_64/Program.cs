@@ -5,11 +5,11 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"*/
 
 Console.WriteLine("Введите число: ");
 int start = int.Parse(Console.ReadLine()!);
-Console.WriteLine(Answer(start, 1));
+Console.WriteLine(Numbers(start, 1));
 
-string Answer(int start, int end){
+string Numbers(int start, int end){
 if(start == end) return start.ToString();
-return (start +", "+ Answer(start - 1, end));
+return (start +", "+ Numbers(start - 1, end));
 }
 
 
