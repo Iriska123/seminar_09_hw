@@ -3,17 +3,15 @@
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30*/
 
-
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите начальное число: ");
 int M = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите конечное число: ");
 int N = int.Parse(Console.ReadLine()!);
+Console.WriteLine(SumFromMtoN(M, N));
 
-Console.WriteLine(Answer(M, N));
-
-string SumFromMtoN(int m, int n){     //// 2 3 4
-int sum = 0;
-if(m == n) return (sum + m).ToString();
-return (sum + m", "+ SumFromMtoN(m + 1, n));
+int SumFromMtoN(int m, int n){    
+if(m == n) return m;
+return (m + SumFromMtoN(m + 1, n));
 }
+
 
